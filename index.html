@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dribbble - Theme switcher animation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <!-- https://dribbble.com/shots/15180851-Theme-switcher-animation -->
+
+    <main id="main" data-theme="light">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">Theme</div>
+          <ul class="theme-switcher">
+            <li class="indicator"></li>
+            <li class="switcher-list" data-theme-switcher="light">
+              <i data-feather="sun"></i> Light
+            </li>
+            <li class="switcher-list" data-theme-switcher="dark">
+              <i data-feather="moon"></i> Dark
+            </li>
+            <li class="switcher-list" data-theme-switcher="black">
+              <i data-feather="star"></i> Black
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <ul class="menus"></ul>
+        </div>
+      </div>
+    </main>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>

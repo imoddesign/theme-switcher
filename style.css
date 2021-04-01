@@ -1,0 +1,143 @@
+:root {
+  --bodyBackground: #dcdfe5;
+  --themeLight: white;
+  --themeDark: #373740;
+  --themeBlack: #1E2026;
+  --white: white;
+  --black: #222;
+  --spacing: 1rem;
+}
+
+body {
+  background-color: var(--bodyBackground);
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  background-color: var(--themeLight);
+  border-radius: 18px;
+  flex-basis: 320px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+  font-size: 14px;
+  margin-bottom: calc(var(--spacing) * 0.5);
+}
+.card-header {
+  padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 1.25);
+  box-shadow: 0 1px 0 var(--bodyBackground);
+}
+.card-body {
+  padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 1.25);
+}
+
+.theme-switcher {
+  display: flex;
+  background-color: #F5F6F8;
+  border-radius: 12px;
+  padding: 0 0.15rem;
+  position: relative;
+}
+.theme-switcher li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  color: var(--black);
+  margin: 0.25rem 0;
+  padding: 0.3rem 0;
+}
+.theme-switcher li .icon {
+  margin-right: 0.3rem;
+  pointer-events: none;
+}
+.theme-switcher li:hover {
+  cursor: pointer;
+}
+.theme-switcher .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  z-index: 0;
+  border-radius: 9px;
+  margin: 0.15rem 0;
+}
+
+.menus li {
+  margin-bottom: 1rem;
+}
+.menus a {
+  display: flex;
+  align-items: center;
+  color: var(--black);
+}
+.menus .icon {
+  margin-right: 0.75rem;
+  width: 21px;
+  stroke-width: 2px;
+}
+
+[data-theme=light] .card {
+  background-color: var(--themeLight);
+}
+[data-theme=light] .theme-switcher li.active {
+  color: var(--themeBlack);
+}
+[data-theme=light] .indicator {
+  background-color: var(--themeLight);
+}
+
+[data-theme=dark] .card {
+  background-color: var(--themeDark);
+}
+[data-theme=dark] .card-title {
+  color: var(--white);
+}
+[data-theme=dark] .theme-switcher li.active {
+  color: var(--white);
+}
+[data-theme=dark] .indicator {
+  background-color: var(--themeDark);
+}
+[data-theme=dark] .menus a {
+  color: var(--white);
+}
+
+[data-theme=black] .card {
+  background-color: var(--themeBlack);
+}
+[data-theme=black] .card-title {
+  color: var(--white);
+}
+[data-theme=black] .theme-switcher li.active {
+  color: var(--white);
+}
+[data-theme=black] .indicator {
+  background-color: var(--themeBlack);
+}
+[data-theme=black] .menus a {
+  color: var(--white);
+}
